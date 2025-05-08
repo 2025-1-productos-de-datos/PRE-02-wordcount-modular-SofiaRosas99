@@ -1,6 +1,6 @@
 import os
 
-from ..src.wordcount import main
+from homework.src.wordcount import main
 
 
 def test_migration():
@@ -15,5 +15,5 @@ def test_migration():
         key, value = line.strip().split("\t")
         results[key] = value
 
-    assert results["computational"] == "3"
-    assert results["analytics"] == "5"
+    assert results.get("computational", 0) == "3"
+    assert results.get("analytics", 0) == "5"
