@@ -8,3 +8,6 @@ def write_count_words(counter, output_folder):
     with open("data/output/results.tsv", "w", encoding="utf-8") as f:
         for key, value in counter.items():
             f.write(f"{key}\t{value}\n")
+    with open("data/output/wordcount.tsv", "w", encoding="utf-8") as f:
+        for key, value in counter.items():
+            f.write(f"{key}\t{value}\n")
